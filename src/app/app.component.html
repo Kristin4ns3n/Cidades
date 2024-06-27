@@ -1,0 +1,43 @@
+<ion-app>
+  <!-- Hamburger menu -->
+  <ion-menu contentId="main-content">
+  <ion-header class="ion-no-border">
+    <div class="bg"></div>
+    <ion-item lines="nones">
+
+      <ion-avatar slot="start">
+        <img src="../assets/img/avatar.jpg" alt="">
+      </ion-avatar>
+
+      <ion-label color="light">
+        {{profile?.name}}
+        <p>
+          <ion-text color="light">
+            {{profile.email}}
+          </ion-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    </ion-header>
+
+    <ion-content>
+      @for(page of pages; track $index) {
+        <ion-item lines="none">
+          <ion-icon 
+            slot="start"
+            [ios]="page.icon + '-outline'"
+            [ios]="page.icon + '-sharp'">
+          </ion-icon>
+
+          <ion-label>{{page.title}} </ion-label>
+
+
+
+        </ion-item>
+      }
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

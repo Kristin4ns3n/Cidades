@@ -1,0 +1,7 @@
+{
+  "name": "SideMenu_Capitals",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
